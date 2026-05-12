@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecosistema Babilonia | Aprende a Leer el Mercado Como las Instituciones | BTF FX</title>
+<meta name="description" content="Deja de estar invertido y transfórmate en un inversor. Analista desde cero en 6 meses. Sistema de aprendizaje continuo con 42 videos, 9 salas temáticas, libro, manual y comunidad activa.">
+<meta name="keywords" content="trading, cripto, inversión, criptomonedas, curso de trading, curso de cripto, cripto desde cero, invertir en criptos, cómo analizar un gráfico, mundo cripto, XRP, Bitcoin, aprender a tradear, smart money trading, order blocks, liquidez en forex, trading para principiantes, análisis técnico crypto, cómo operar forex, bitcoin trading español, BTF FX, Ecosistema Babilonia">
+<meta property="og:title" content="Ecosistema Babilonia — Transfórmate en Inversor en 6 Meses">
+<meta property="og:description" content="Más que un curso. Un sistema de aprendizaje continuo para crear tu criterio analítico.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dark: #8B6914;
+    --black: #060606;
+    --black-mid: #0E0E0E;
+    --black-light: #1A1A1A;
+    --black-card: #111111;
+    --white: #F5F0E8;
+    --white-dim: #B8B0A0;
+    --amber: #D4820A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* GRAIN OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background: linear-gradient(to bottom, rgba(6,6,6,0.98), transparent);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--black);
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .nav-cta:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    transform: translateY(-1px);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(212,130,10,0.05) 0%, transparent 60%);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(36px, 6vw, 82px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-title span {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-style: italic;
+    color: var(--white-dim);
+    margin-bottom: 48px;
+    max-width: 700px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-video-placeholder {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background: var(--black-card);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 56px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .hero-video-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.03), transparent);
+  }
+
+  .play-btn {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 40px rgba(201,168,76,0.3);
+  }
+
+  .play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 60px rgba(201,168,76,0.5);
+  }
+
+  .play-btn svg { margin-left: 5px; }
+
+  .video-label {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* DOLOR */
+  .pain {
+    padding: 100px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .pain h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: var(--white);
+  }
+
+  .pain-list {
+    list-style: none;
+    text-align: left;
+    max-width: 680px;
+    margin: 0 auto 48px;
+  }
+
+  .pain-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    padding-left: 32px;
+    position: relative;
+    font-size: 19px;
+    color: var(--white-dim);
+  }
+
+  .pain-list li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: #8B0000;
+    font-weight: bold;
+  }
+
+  .pain-close {
+    font-size: clamp(20px, 3vw, 30px);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0.3;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  /* QUÉ ES */
+  .what {
+    padding: 100px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .what-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .what-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 3.5vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 32px;
+  }
+
+  .what-text h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .what-text p {
+    font-size: 19px;
+    color: var(--white-dim);
+    margin-bottom: 20px;
+  }
+
+  .badge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .badge {
+    background: var(--black-card);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .badge-num {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--gold);
+    display: block;
+  }
+
+  .badge-label {
+    font-size: 13px;
+    color: var(--white-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* SALAS */
+  .salas {
+    padding: 100px 5%;
+    background: var(--black-mid);
+  }
+
+  .salas-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .salas h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 46px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .salas-sub {
+    text-align: center;
+    color: var(--white-dim);
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 64px;
+  }
+
+  .salas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .sala {
+    background: var(--black-card);
+    padding: 32px 28px;
+    border: 1px solid rgba(201,168,76,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .sala:hover {
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-3px);
+  }
+
+  .sala::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sala:hover::before { opacity: 1; }
+
+  .sala-num {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .sala h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .sala p {
+    font-size: 15px;
+    color: var(--white-dim);
+    line-height: 1.6;
+  }
+
+  /* INCLUYE */
+  .includes {
+    padding: 100px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .includes h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 3.5vw, 42px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .includes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .include-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 28px;
+    background: var(--black-card);
+    border: 1px solid rgba(201,168,76,0.1);
+    transition: border-color 0.3s;
+  }
+
+  .include-item:hover { border-color: rgba(201,168,76,0.35); }
+
+  .include-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .include-item h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+
+  .include-item p {
+    font-size: 15px;
+    color: var(--white-dim);
+    line-height: 1.5;
+  }
+
+  /* PRECIO */
+  .price {
+    padding: 100px 5%;
+    background: var(--black-mid);
+    text-align: center;
+  }
+
+  .price-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .price h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 46px);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .price-desc {
+    font-size: 19px;
+    color: var(--white-dim);
+    font-style: italic;
+    margin-bottom: 48px;
+  }
+
+  .price-box {
+    background: var(--black-card);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 56px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--gold-dark), var(--gold-light), var(--gold-dark));
+  }
+
+  .price-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 80px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .price-note {
+    font-size: 15px;
+    color: var(--white-dim);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  .value-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+
+  .value-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .value-list li span:first-child { color: var(--white-dim); }
+  .value-list li span:last-child { color: var(--gold); font-weight: 600; }
+
+  .value-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 700;
+    border-top: 1px solid rgba(201,168,76,0.3);
+    margin-bottom: 40px;
+  }
+
+  /* BOTONES */
+  .btn-paypal {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #003087, #009cde);
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 22px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+  }
+
+  .btn-paypal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,156,222,0.3);
+  }
+
+  .btn-whatsapp {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 18px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-whatsapp:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: var(--gold);
+  }
+
+  /* GARANTIA */
+  .guarantee {
+    padding: 80px 5%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .guarantee-icon {
+    font-size: 56px;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .guarantee h3 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .guarantee p {
+    font-size: 18px;
+    color: var(--white-dim);
+    line-height: 1.8;
+  }
+
+  /* CIERRE AGRESIVO */
+  .close-section {
+    padding: 100px 5%;
+    background: var(--black-mid);
+    text-align: center;
+  }
+
+  .close-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  .close-section h2 span {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .close-section p {
+    font-size: 20px;
+    color: var(--white-dim);
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+
+  .btn-final {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    color: var(--black);
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding: 26px 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 60px rgba(201,168,76,0.25);
+  }
+
+  .btn-final:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 60px rgba(201,168,76,0.5);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 48px 5%;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 13px;
+    color: rgba(184,176,160,0.5);
+    letter-spacing: 1px;
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold-dark);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  /* FLOATING WHATSAPP */
+  .float-wa {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 200;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .float-wa:hover { transform: scale(1.1); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .what-grid { grid-template-columns: 1fr; gap: 40px; }
+    .salas-grid { grid-template-columns: 1fr; }
+    .includes-list { grid-template-columns: 1fr; }
+    .badge-grid { grid-template-columns: 1fr 1fr; }
+    .price-box { padding: 36px 24px; }
+    .price-tag { font-size: 56px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">BTF FX · Ecosistema Babilonia</span>
+  <a href="#precio" class="nav-cta">Quiero Entrar</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">BTF FX · Ecosistema Babilonia</p>
+  <h1 class="hero-title">
+    Deja de Estar Invertido<br>
+    <span>Transfórmate en Inversor</span>
+  </h1>
+  <p class="hero-subtitle">Analista desde cero en 6 meses — Más que un curso, un sistema de aprendizaje continuo para crear tu criterio analítico</p>
+
+  <div class="hero-video-placeholder">
+    <div class="play-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#060606">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+    </div>
+    <span class="video-label">Ver Presentación</span>
+  </div>
+
+  <a href="#precio" class="nav-cta" style="font-size:14px; padding:18px 48px; letter-spacing:3px;">
+    Quiero Transformarme — $197
+  </a>
+</section>
+
+<!-- DOLOR -->
+<section class="pain">
+  <span class="section-label">¿Te identificas con esto?</span>
+  <h2 class="reveal">Sigues perdiendo dinero porque operas sin criterio propio</h2>
+  <ul class="pain-list reveal">
+    <li>Compras cuando sube y vendes cuando baja — siempre tarde</li>
+    <li>Sigues señales de otros sin entender por qué entran ni por qué salen</li>
+    <li>Inviertes por recomendación de redes sociales y te quemas</li>
+    <li>No sabes leer un gráfico y tomas decisiones por intuición o miedo</li>
+    <li>Llevas meses o años en esto y sientes que das vueltas en círculos</li>
+  </ul>
+  <p class="pain-close reveal">El mercado no es difícil. Lo que falta es el lenguaje correcto para leerlo.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- QUÉ ES -->
+<section class="what">
+  <div class="what-grid">
+    <div class="what-text reveal">
+      <span class="section-label">La solución</span>
+      <h2>Un sistema diseñado para que <em>nunca más dependas de nadie</em></h2>
+      <p>El Ecosistema Babilonia no es un curso más. Es un sistema de aprendizaje en capas diseñado para que construyas tu propio criterio analítico desde cero hasta nivel avanzado.</p>
+      <p>Aprenderás a leer el mercado como lo hacen las instituciones — con lógica, estructura y método. Sin señales. Sin dependencia. Con tu propio análisis.</p>
+    </div>
+    <div class="badge-grid reveal">
+      <div class="badge">
+        <span class="badge-num">9</span>
+        <span class="badge-label">Salas Temáticas</span>
+      </div>
+      <div class="badge">
+        <span class="badge-num">42</span>
+        <span class="badge-label">Videos del Curso</span>
+      </div>
+      <div class="badge">
+        <span class="badge-num">1</span>
+        <span class="badge-label">Libro Incluido</span>
+      </div>
+      <div class="badge">
+        <span class="badge-num">∞</span>
+        <span class="badge-label">Comunidad Activa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 SALAS -->
+<section class="salas">
+  <div class="salas-inner">
+    <span class="section-label" style="display:block;text-align:center;">Lo que encontrarás dentro</span>
+    <h2 class="reveal">Las 9 Salas del Ecosistema</h2>
+    <p class="salas-sub reveal">Cada sala es un nivel. Cada nivel construye el siguiente.</p>
+    <div class="salas-grid reveal">
+      <div class="sala">
+        <span class="sala-num">Sala 01</span>
+        <h3>Fundamentos del Mercado</h3>
+        <p>Cómo funciona realmente el precio. Oferta, demanda y la lógica institucional detrás de cada movimiento.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 02</span>
+        <h3>Lectura de Gráficos</h3>
+        <p>Velas japonesas, estructura de mercado, tendencias y rangos. El lenguaje visual del precio.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 03</span>
+        <h3>Liquidez y Smart Money</h3>
+        <p>Barridos de stops, zonas de liquidez y cómo las instituciones mueven el precio a su favor.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 04</span>
+        <h3>Order Blocks y FVG</h3>
+        <p>Zonas de demanda y oferta institucional. Cómo identificarlas y operar desde ellas.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 05</span>
+        <h3>Gestión de Riesgo</h3>
+        <p>Tamaño de posición, stop loss técnico, RR mínimo y reglas que protegen tu capital.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 06</span>
+        <h3>Estrategias de Entrada</h3>
+        <p>Setups concretos, gatillos de entrada, confirmaciones y cómo ejecutar sin dudar.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 07</span>
+        <h3>Crypto e Inversión DCA</h3>
+        <p>Bitcoin, altcoins y cómo construir una cartera de inversión diversificada por riesgo.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 08</span>
+        <h3>Mentalidad y Disciplina</h3>
+        <p>El factor que separa al trader rentable del que da vueltas en círculos. Psicología real.</p>
+      </div>
+      <div class="sala">
+        <span class="sala-num">Sala 09</span>
+        <h3>Plan de Trading</h3>
+        <p>Construcción de tu propio plan operativo. El documento que rige cada decisión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section class="includes">
+  <span class="section-label" style="display:block;text-align:center;">Todo lo que incluye</span>
+  <h2 class="reveal">Un ecosistema completo.<br>No un curso suelto.</h2>
+  <div class="includes-list reveal">
+    <div class="include-item">
+      <span class="include-icon">🎬</span>
+      <div>
+        <h4>42 Videos + Bonus Track</h4>
+        <p>Curso completo grabado. Acceso de por vida. Actualizado con los bonus de cada módulo.</p>
+      </div>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">📖</span>
+      <div>
+        <h4>Libro: Trading la Manera Difícil</h4>
+        <p>"Trading — la manera difícil de hacer dinero fácil". El libro que acompaña todo el aprendizaje.</p>
+      </div>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">📋</span>
+      <div>
+        <h4>Manual de Trabajo</h4>
+        <p>Ejercicios prácticos, plantillas y guías para aplicar cada concepto directamente al mercado.</p>
+      </div>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">💬</span>
+      <div>
+        <h4>Comunidad + Acceso Directo</h4>
+        <p>Chat privado donde yo respondo personalmente. Preguntas reales, respuestas reales.</p>
+      </div>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">🏛️</span>
+      <div>
+        <h4>9 Salas Temáticas</h4>
+        <p>Material filtrado y organizado por nivel. Sin ruido. Solo lo que necesitas saber.</p>
+      </div>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">♾️</span>
+      <div>
+        <h4>Acceso de Por Vida</h4>
+        <p>Un pago único. Sin suscripciones. Sin cobros ocultos. Tuyo para siempre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIO -->
+<section class="price" id="precio">
+  <div class="price-inner">
+    <span class="section-label">Inversión única</span>
+    <h2 class="reveal">Un solo pago.<br>Acceso de por vida.</h2>
+    <p class="price-desc reveal">Sin mensualidades. Sin renovaciones. Sin sorpresas.</p>
+    <div class="price-box reveal">
+      <div class="price-tag">$197</div>
+      <p class="price-note">PAGO ÚNICO — ACCESO INMEDIATO</p>
+      <ul class="value-list">
+        <li><span>42 videos + bonus track</span><span>$297</span></li>
+        <li><span>Libro digital incluido</span><span>$47</span></li>
+        <li><span>Manual de trabajo</span><span>$37</span></li>
+        <li><span>9 salas de estudio</span><span>$97</span></li>
+        <li><span>Comunidad + acceso directo</span><span>$197/año</span></li>
+      </ul>
+      <div class="value-total">
+        <span>Valor total</span>
+        <span style="color:var(--white-dim);text-decoration:line-through;">$675</span>
+      </div>
+      <a href="https://www.paypal.com/ncp/payment/C7BJ6NA9ZYVKE" target="_blank" class="btn-paypal">
+        💳 Comprar Ahora por $197 — PayPal
+      </a>
+      <a href="https://wa.me/59899753865?text=Hola,%20quiero%20saber%20más%20sobre%20el%20Ecosistema%20Babilonia" target="_blank" class="btn-whatsapp">
+        💬 Tengo Dudas — Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section class="guarantee">
+  <span class="guarantee-icon reveal">🛡️</span>
+  <h3 class="reveal">Mi compromiso contigo</h3>
+  <p class="reveal">Si en los primeros 7 días sientes que el contenido no es lo que esperabas, me escribes y te devuelvo el dinero sin preguntas. No hay riesgo del lado tuyo. Todo el riesgo es mío.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- CIERRE AGRESIVO -->
+<section class="close-section">
+  <h2 class="reveal">Sigues esperando<br><span>o empiezas hoy.</span></h2>
+  <p class="reveal">Cada día que pasa sin criterio propio es un día operando a ciegas. El mercado no espera. Las instituciones no esperan. La pregunta es si tú vas a seguir esperando.</p>
+  <a href="#precio" class="btn-final">Quiero Transformarme — $197</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">BTF FX · ECOSISTEMA BABILONIA</span>
+  <p>CONOCIMIENTO · DISCIPLINA · LIBERTAD</p>
+  <p style="margin-top:12px;">© 2025 BTF FX — Todos los derechos reservados</p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/59899753865?text=Hola,%20me%20interesa%20el%20Ecosistema%20Babilonia" target="_blank" class="float-wa">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Smooth nav background
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if(window.scrollY > 80) {
+      nav.style.background = 'rgba(6,6,6,0.98)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.2)';
+    } else {
+      nav.style.background = 'linear-gradient(to bottom, rgba(6,6,6,0.98), transparent)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.1)';
+    }
+  });
+</script>
+</body>
+</html>
