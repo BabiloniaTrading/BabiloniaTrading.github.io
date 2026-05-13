@@ -20,8 +20,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--gold-dark)}
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:20px 6%;transition:all .4s ease;border-bottom:1px solid rgba(201,168,76,.08)}
 nav.scrolled{background:rgba(6,6,6,.97);border-bottom-color:rgba(201,168,76,.18);padding:14px 6%}
-.nav-logo{font-family:'Cinzel',serif;font-size:12px;font-weight:700;letter-spacing:5px;color:var(--gold);text-transform:uppercase}
-.nav-logo span{color:var(--white-dim)}
+.nav-logo img{height:44px;width:auto;display:block}
 .nav-cta{font-family:'Cinzel',serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--black);background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));padding:10px 22px;text-decoration:none;transition:all .3s ease}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(201,168,76,.25)}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px 6% 100px;position:relative;overflow:hidden}
@@ -158,13 +157,14 @@ footer p{font-size:14px;color:var(--white-muted);letter-spacing:2px}
 <body>
 
 <nav id="navbar">
-  <div class="nav-logo">BTF FX <span>·</span> Ecosistema Babilonia</div>
+  <div class="nav-logo"><img src="logo.png" alt="Babilonia Trading Logo"></div>
   <a href="#precio" class="nav-cta">Entrar al Ecosistema</a>
 </nav>
 
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-line"></div>
+  <img src="portada.png" alt="Ecosistema Babilonia" style="width:100%;max-width:900px;border:1px solid rgba(201,168,76,0.2);margin-bottom:50px;opacity:0;animation:fadeUp .9s ease .2s forwards;">
   <p class="hero-eyebrow">BTF FX · Ecosistema Babilonia · Montevideo, Uruguay</p>
   <p class="hero-seo-title">Curso de Trading Smart Money · Criptomonedas · Análisis Institucional</p>
   <h1 class="hero-title">
