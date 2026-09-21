@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bienvenido a Ecosistema Babilonia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --black: #0d0d0c;
+    --charcoal: #171613;
+    --paper: #f4f1e9;
+    --gold: #b8934a;
+    --gold-bright: #d6b46f;
+    --gray: #8c8a80;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); height: 100%; }
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--black);
+    color: var(--paper);
+    font-family: 'Inter', -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .wrap { max-width: 520px; width: 100%; }
+
+  .mark {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+
+  .check {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 28px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .check svg { width: 24px; height: 24px; }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 6vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    color: var(--paper);
+  }
+
+  p.lead {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c9c6ba;
+    margin: 0 0 40px;
+  }
+
+  .card {
+    background: var(--charcoal);
+    border: 1px solid rgba(184,147,74,0.25);
+    border-radius: 4px;
+    padding: 32px 28px;
+    margin-bottom: 24px;
+  }
+
+  .card p.step {
+    font-size: 14px;
+    color: var(--gray);
+    margin: 0 0 20px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 17px 24px;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    margin-bottom: 12px;
+  }
+  .btn-primary:hover { background: var(--gold-bright); }
+
+  .hint {
+    font-size: 13px;
+    color: var(--gray);
+    margin: 0 0 40px;
+  }
+
+  .support {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 32px;
+  }
+
+  .support p {
+    font-size: 14px;
+    color: #9c9a90;
+    margin: 0 0 16px;
+    line-height: 1.6;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--paper);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+  .signature {
+    margin-top: 44px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gray);
+  }
+
+  @media (max-width: 400px) {
+    .card { padding: 26px 20px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark">ECOSISTEMA BABILONIA</div>
+
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#b8934a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+
+    <h1>Listo. Ya sos parte del Ecosistema.</h1>
+    <p class="lead">Tu pago se procesó correctamente. Quedás a un solo paso de entrar — y este es el único paso que te falta.</p>
+
+    <div class="card">
+      <p class="step">Tocá el botón de abajo para entrar al canal privado de Telegram, donde está todo el material: los videos, el libro, el manual, las salas temáticas y la comunidad.</p>
+      <a class="btn btn-primary" href="https://t.me/+u31nE9XZluI4N2Ux" target="_blank" rel="noopener">Entrar a Telegram</a>
+    </div>
+
+    <p class="hint">Guardá este link o tildá el canal como favorito — es tu acceso de por vida al Ecosistema.</p>
+
+    <div class="support">
+      <p>¿Tuviste algún problema con el pago o no podés entrar al canal? Escribime directo y te ayudo.</p>
+      <a class="btn btn-secondary" href="https://wa.me/59899753865?text=Hola%20Javi%3A%0A1%29%20Tengo%20problemas%20con%20el%20pago%20del%20Ecosistema%20Babilonia.%0A%0A2%29%20Tengo%20problemas%20para%20ingresar%20a%20Telegram" target="_blank" rel="noopener">Escribirle a Javi por WhatsApp</a>
+    </div>
+
+    <div class="signature">— Javi Babilonia</div>
+  </div>
+</body>
+</html>
